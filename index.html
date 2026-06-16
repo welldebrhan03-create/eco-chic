@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Studio | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">NEXUS<span>STUDIO</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <span class="brand-subtitle">Eco-Chic-Bloom | ኤኮ-ሺክ-ብሉም</span>
+            <h1>Bridging Data Science & Sustainable Design</h1>
+            <p>Exploring environmental data, spatial analysis, and eco-conscious textile innovation.</p>
+            <a href="#portfolio" class="cta-btn">View My Work</a>
+        </div>
+    </header>
+
+    <section id="about" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Identity & Expertise</h2>
+            <div class="about-container">
+                <div class="about-card">
+                    <div class="icon-large"><i class="fas fa-database"></i></div>
+                    <h3>Data Science & GIS</h3>
+                    <p>Analyzing complex datasets, executing advanced watershed delineation, and leveraging spatial analysis to solve environmental and meteorological challenges.</p>
+                </div>
+                <div class="about-card">
+                    <div class="icon-large"><i class="fas fa-seedling"></i></div>
+                    <h3>Eco-Chic-Bloom</h3>
+                    <p>Breathing second life into leftover fabrics through upcycling, traditional craftsmanship, and creating elegant patchwork art that tells a story.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Selected Works</h2>
+            
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="data">Data Science & GIS</button>
+                <button class="filter-btn" data-filter="fashion">Sustainable Fashion</button>
+            </div>
+
+            <div class="portfolio-grid">
+                <div class="portfolio-item filter-item data">
+                    <div class="portfolio-content">
+                        <span class="category-tag">GIS / Hydrology</span>
+                        <h3>Automated Watershed Delineation</h3>
+                        <p>A step-by-step geospatial analysis project utilizing digital elevation models (DEMs) to extract stream networks, calculate flow direction, and precisely map catchment boundaries.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item filter-item fashion">
+                    <div class="portfolio-content">
+                        <span class="category-tag">Eco-Chic-Bloom</span>
+                        <h3>Elegant Textile Patchwork Art</h3>
+                        <p>A collection of custom, handcrafted wall art installations created entirely from repurposed leftover fabrics, designed for display in modern boutique hotels and guest houses.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item filter-item data">
+                    <div class="portfolio-content">
+                        <span class="category-tag">Data Analytics</span>
+                        <h3>Environmental Data Modeling</h3>
+                        <p>Applying data science methodologies to analyze regional climate and meteorological datasets, transforming complex environmental trends into clear, actionable visual insights.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item filter-item fashion">
+                    <div class="portfolio-content">
+                        <span class="category-tag">Sustainable Fashion</span>
+                        <h3>Second-Life Fabric Customization</h3>
+                        <p>An innovative apparel concepts collection giving a new life to manufacturing scraps through creative upcycling, zero-waste patterning, and mindful design.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-container">
+                <form id="contactForm" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Inquiry Type</label>
+                        <select id="subject" name="subject" required>
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="data-gis">Data Science / GIS Collaboration</option>
+                            <option value="fashion">Eco-Chic-Bloom Fashion & Art</option>
+                            <option value="general">General Consultation</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="How can we collaborate?" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Nexus Studio & Eco-Chic-Bloom. Handcrafted with Care.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
