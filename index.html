@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexus Studio | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Nexus Studio | Multidisciplinary Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght=300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -16,6 +16,7 @@
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#media">Presentation</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -24,9 +25,9 @@
     <header class="hero">
         <div class="hero-content">
             <span class="brand-subtitle">Eco-Chic-Bloom | ኤኮ-ሺክ-ብሉም</span>
-            <h1>Bridging Data Science & Sustainable Design</h1>
-            <p>Exploring environmental data, spatial analysis, and eco-conscious textile innovation.</p>
-            <a href="#portfolio" class="cta-btn">View My Work</a>
+            <h1>Data Science, Sustainable Design & Logic</h1>
+            <p>Integrating environmental analysis, upcycled textile innovation, and philosophical communication.</p>
+            <a href="#portfolio" class="cta-btn">Explore Portfolio</a>
         </div>
     </header>
 
@@ -37,12 +38,17 @@
                 <div class="about-card">
                     <div class="icon-large"><i class="fas fa-database"></i></div>
                     <h3>Data Science & GIS</h3>
-                    <p>Analyzing complex datasets, executing advanced watershed delineation, and leveraging spatial analysis to solve environmental and meteorological challenges.</p>
+                    <p>Advanced watershed delineation and climate modeling using geospatial technology.</p>
                 </div>
                 <div class="about-card">
                     <div class="icon-large"><i class="fas fa-seedling"></i></div>
                     <h3>Eco-Chic-Bloom</h3>
-                    <p>Breathing second life into leftover fabrics through upcycling, traditional craftsmanship, and creating elegant patchwork art that tells a story.</p>
+                    <p>Sustainable fashion and textile art (ኤኮ-ሺክ-ብሉም) creating beauty from repurposed materials.</p>
+                </div>
+                <div class="about-card">
+                    <div class="icon-large"><i class="fas fa-microphone-lines"></i></div>
+                    <h3>Communications</h3>
+                    <p>Breaking down complex philosophical and psychological concepts into visual presentations.</p>
                 </div>
             </div>
         </div>
@@ -53,42 +59,55 @@
             <h2 class="section-title">Selected Works</h2>
             
             <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="data">Data Science & GIS</button>
-                <button class="filter-btn" data-filter="fashion">Sustainable Fashion</button>
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="data">GIS & Data</button>
+                <button class="filter-btn" data-filter="fashion">Eco-Chic-Bloom</button>
+                <button class="filter-btn" data-filter="logic">Presentations</button>
             </div>
 
             <div class="portfolio-grid">
                 <div class="portfolio-item filter-item data">
                     <div class="portfolio-content">
-                        <span class="category-tag">GIS / Hydrology</span>
-                        <h3>Automated Watershed Delineation</h3>
-                        <p>A step-by-step geospatial analysis project utilizing digital elevation models (DEMs) to extract stream networks, calculate flow direction, and precisely map catchment boundaries.</p>
+                        <span class="category-tag">GIS</span>
+                        <h3>Watershed Analysis</h3>
+                        <p>Geospatial analysis project extracting stream networks from DEM data.</p>
                     </div>
                 </div>
 
                 <div class="portfolio-item filter-item fashion">
                     <div class="portfolio-content">
-                        <span class="category-tag">Eco-Chic-Bloom</span>
-                        <h3>Elegant Textile Patchwork Art</h3>
-                        <p>A collection of custom, handcrafted wall art installations created entirely from repurposed leftover fabrics, designed for display in modern boutique hotels and guest houses.</p>
+                        <span class="category-tag">Fashion</span>
+                        <h3>Patchwork Textile Art</h3>
+                        <p>Luxury wall installations created from upcycled fabric scraps.</p>
                     </div>
                 </div>
 
-                <div class="portfolio-item filter-item data">
+                <div class="portfolio-item filter-item logic">
                     <div class="portfolio-content">
-                        <span class="category-tag">Data Analytics</span>
-                        <h3>Environmental Data Modeling</h3>
-                        <p>Applying data science methodologies to analyze regional climate and meteorological datasets, transforming complex environmental trends into clear, actionable visual insights.</p>
+                        <span class="category-tag">Logic & Psychology</span>
+                        <h3>12 Rules for Life Presentation</h3>
+                        <p>A 29-slide comprehensive analysis of psychological and mythological frameworks.</p>
+                        <a href="12_rules_comprehensive.html" target="_blank" class="text-link">Open Slides <i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="portfolio-item filter-item fashion">
-                    <div class="portfolio-content">
-                        <span class="category-tag">Sustainable Fashion</span>
-                        <h3>Second-Life Fabric Customization</h3>
-                        <p>An innovative apparel concepts collection giving a new life to manufacturing scraps through creative upcycling, zero-waste patterning, and mindful design.</p>
-                    </div>
+    <section id="media" class="section-padding" style="background-color: #f0f4f2;">
+        <div class="container">
+            <h2 class="section-title">Video Presentation</h2>
+            <div class="video-wrapper">
+                <video controls poster="https://images.unsplash.com/photo-1524178232363-1fb280714553?q=80&w=1470">
+                    <source src="your-video-file.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-info">
+                    <h3>12 Rules for Life: Recorded Session</h3>
+                    <p>This video provides a deep dive into the 12 Rules, explaining the real-life examples and the "Antidote to Chaos" philosophy.</p>
+                    <a href="12_rules_comprehensive.html" target="_blank" class="cta-btn" style="display: inline-block; margin-top: 15px; background-color: #2c3e50; text-decoration: none; padding: 10px 20px; color: white; border-radius: 4px;">
+                        <i class="fas fa-file-powerpoint" style="margin-right: 8px;"></i> View Full Presentation Slides
+                    </a>
                 </div>
             </div>
         </div>
@@ -98,27 +117,18 @@
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
             <div class="contact-container">
-                <form id="contactForm" action="#" method="POST">
+                <form id="contactForm">
                     <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <label>Name</label>
+                        <input type="text" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                        <label>Email</label>
+                        <input type="email" placeholder="email@example.com" required>
                     </div>
                     <div class="form-group">
-                        <label for="subject">Inquiry Type</label>
-                        <select id="subject" name="subject" required>
-                            <option value="" disabled selected>Select an option</option>
-                            <option value="data-gis">Data Science / GIS Collaboration</option>
-                            <option value="fashion">Eco-Chic-Bloom Fashion & Art</option>
-                            <option value="general">General Consultation</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" placeholder="How can we collaborate?" required></textarea>
+                        <label>Message</label>
+                        <textarea rows="4" placeholder="How can we collaborate?" required></textarea>
                     </div>
                     <button type="submit" class="submit-btn">Send Message</button>
                 </form>
@@ -127,7 +137,7 @@
     </section>
 
     <footer class="footer">
-        <p>&copy; 2026 Nexus Studio & Eco-Chic-Bloom. Handcrafted with Care.</p>
+        <p>&copy; 2026 Nexus Studio & Eco-Chic-Bloom. Multidisciplinary Innovation.</p>
     </footer>
 
     <script src="script.js"></script>
