@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Miracle Morning Presentation</title>
+    <title>Professional Project Portfolio</title>
     <style>
         :root {
             --bg-primary: #f8fafc;
-            --slide-bg: #ffffff;
+            --card-bg: #ffffff;
             --text-main: #1e293b;
             --text-muted: #64748b;
             --accent-color: #0284c7;
@@ -34,22 +34,22 @@
             overflow: hidden;
         }
 
-        /* Presentation Container */
-        .presentation-container {
+        /* Portfolio Wrapper Container */
+        .portfolio-container {
             position: relative;
             width: 90vw;
             max-width: 1100px;
             height: 65vh;
             max-height: 700px;
-            background: var(--slide-bg);
+            background: var(--card-bg);
             border-radius: 16px;
             box-shadow: var(--shadow);
             border: 1px solid var(--border-color);
             overflow: hidden;
         }
 
-        /* Slide Core Layout */
-        .slide {
+        /* Portfolio Item (Slide Core) Layout */
+        .portfolio-item {
             display: none;
             width: 100%;
             height: 100%;
@@ -57,7 +57,7 @@
             animation: fadeIn 0.4s ease-in-out;
         }
 
-        .slide.active {
+        .portfolio-item.active {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -68,7 +68,7 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Typography & Layout Elements */
+        /* Typography & Header Elements */
         h1 {
             font-size: 2.8rem;
             color: var(--text-main);
@@ -79,55 +79,51 @@
         h2 {
             font-size: 2.2rem;
             color: var(--accent-color);
-            margin-bottom: 25px;
-            border-bottom: 2px solid var(--accent-light);
-            padding-bottom: 10px;
+            margin-bottom: 5px;
         }
 
-        .subtitle {
-            font-size: 1.3rem;
-            color: var(--text-muted);
-            margin-bottom: 30px;
-            font-weight: 400;
-        }
-
-        .highlight-box {
+        .project-tag {
+            display: inline-block;
             background-color: var(--accent-light);
-            border-left: 5px solid var(--accent-color);
-            padding: 20px;
-            border-radius: 0 8px 8px 0;
-            font-size: 1.2rem;
-            font-style: italic;
-            color: var(--text-main);
-            margin: 20px 0;
+            color: var(--accent-color);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 25px;
+            align-self: flex-start;
         }
 
-        /* Grid Layouts for Content */
+        .description {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* Grid Layouts for Project Details */
         .grid-2 {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1.2fr 0.8fr;
             gap: 40px;
             align-items: start;
         }
 
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .card {
+        .feature-box {
             background: var(--bg-primary);
             padding: 25px;
             border-radius: 10px;
             border: 1px solid var(--border-color);
         }
 
-        .card h3 {
-            color: var(--accent-color);
-            margin-bottom: 12px;
+        .feature-box h3 {
+            color: var(--text-main);
+            margin-bottom: 15px;
             font-size: 1.25rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
         }
 
         ul {
@@ -138,19 +134,19 @@
             position: relative;
             padding-left: 25px;
             margin-bottom: 12px;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             color: var(--text-main);
             line-height: 1.5;
         }
 
         ul li::before {
-            content: "•";
+            content: "✓";
             color: var(--accent-color);
             font-weight: bold;
-            font-size: 1.5rem;
+            font-size: 1.1rem;
             position: absolute;
             left: 5px;
-            top: -4px;
+            top: 0px;
         }
 
         /* Controls & Navigation */
@@ -165,7 +161,7 @@
         }
 
         .nav-btn {
-            background-color: var(--slide-bg);
+            background-color: var(--card-bg);
             border: 1px solid var(--border-color);
             color: var(--text-main);
             padding: 12px 24px;
@@ -183,202 +179,119 @@
             border-color: var(--accent-color);
         }
 
-        .slide-number {
+        .item-counter {
             font-size: 0.95rem;
             color: var(--text-muted);
             font-weight: 500;
         }
 
-        /* Utility classes */
         .center-text { text-align: center; }
         .accent-text { color: var(--accent-color); font-weight: bold; }
     </style>
 </head>
 <body>
 
-    <div class="presentation-container">
+    <div class="portfolio-container">
 
-        <div class="slide active center-text">
-            <h1>Welcome to the Powerful World of<br><span class="accent-text">The Miracle Morning</span></h1>
-            <p class="subtitle">Based on the life-changing book by Hal Elrod</p>
-            <div style="max-width: 600px; margin: 0 auto;" class="highlight-box">
-                "A masterclass in habits, mindset, and personal growth."
-            </div>
+        <div class="portfolio-item active center-text">
+            <h1>Interactive <span class="accent-text">Project Portfolio</span></h1>
+            <p class="description" style="max-width: 650px; margin: 0 auto 30px auto;">
+                Welcome to my professional portfolio dashboard. Use the navigation buttons below or your keyboard arrow keys to browse through my key work profiles, design applications, and technical specialties.
+            </p>
         </div>
 
-        <div class="slide">
-            <h2>The Core Premise</h2>
+        <div class="portfolio-item">
+            <h2>Eco-Chic-Bloom Fashion House</h2>
+            <span class="project-tag">Brand Identity & Sustainable Design</span>
             <div class="grid-2">
                 <div>
-                    <div class="highlight-box" style="margin-top: 0;">
-                        “How you start your morning affects your whole day and your whole life.”
-                    </div>
-                    <p style="font-size: 1.15rem; line-height: 1.6; color: var(--text-muted);">
-                        Many people live far below their actual potential because they wake up late, rush through mornings, experience high stress, and fail to dedicate time to self-improvement.
+                    <p class="description">
+                        An eco-conscious creative identity system designed around environmental protection and raw material preservation. The concept emphasizes giving discarded materials a high-end structural second life.
                     </p>
                 </div>
+                <div class="feature-box">
+                    <h3>Core Focus Elements</h3>
+                    <ul>
+                        <li><strong>Visual Assets:</strong> Unified logo configurations using stylized globe and needle icons.</li>
+                        <li><strong>Sustainable Ethos:</strong> Deep roots in upcycling and transforming leftover fabrics into fashion.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-item">
+            <h2>Textile Patchwork & Elegant Wall Art</h2>
+            <span class="project-tag">Interior Decor & Sustainability</span>
+            <div class="grid-2">
                 <div>
+                    <p class="description">
+                        Curating upscale, environmentally conscious artistic textile patchworks made from repurposed fabric remainders. These curated art compositions are designed for mounting within high-end commercial interiors.
+                    </p>
+                </div>
+                <div class="feature-box">
+                    <h3>Target Environments</h3>
                     <ul>
-                        <li><strong>Intentional Routines:</strong> A structured morning routine can fundamentally rewrite your habits and thinking patterns.</li>
-                        <li><strong>Compound Impact:</strong> Tiny, incremental daily choices build massive long-term success.</li>
-                        <li><strong>Daily Evolution:</strong> True personal growth must become a daily, non-negotiable habit.</li>
+                        <li>Boutique Hotels & Lodgings</li>
+                        <li>Premium Guest Houses</li>
+                        <li>Eco-conscious Residential Spaces</li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <div class="slide center-text">
-            <h2>The Framework: S.A.V.E.R.S.</h2>
-            <p class="subtitle" style="margin-bottom: 40px;">The heart of the book lies in a six-part acronym representing daily morning activities engineered to upgrade your health, productivity, confidence, and relationships.</p>
-            <div class="grid-3" style="grid-template-columns: repeat(6, 1fr);">
-                <div class="card"><h1 style="font-size: 2.5rem; margin:0; color: var(--accent-color);">S</h1><p>Silence</p></div>
-                <div class="card"><h1 style="font-size: 2.5rem; margin:0; color: var(--accent-color);">A</h1><p>Affirmations</p></div>
-                <div class="card"><h1 style="font-size: 2.5rem; margin:0; color: var(--accent-color);">V</h1><p>Visualization</p></div>
-                <div class="card"><h1 style="font-size: 2.5rem; margin:0; color: var(--accent-color);">E</h1><p>Exercise</p></div>
-                <div class="card"><h1 style="font-size: 2.5rem; margin:0; color: var(--accent-color);">R</h1><p>Reading</p></div>
-                <div class="card"><h1 style="font-size: 2.5rem; margin:0; color: var(--accent-color);">S</h1><p>Scribing</p></div>
-            </div>
-        </div>
-
-        <div class="slide">
-            <h2>1. Silence & 2. Affirmations</h2>
+        <div class="portfolio-item">
+            <h2>Watershed Analysis & GIS Delineation</h2>
+            <span class="project-tag">Technical Systems & Geoprocessing</span>
             <div class="grid-2">
-                <div class="card">
-                    <h3>S — Silence</h3>
-                    <p style="color: var(--text-muted); margin-bottom: 15px;">Spend a few quiet minutes to calm the mind, minimize daily anxiety, and optimize focus through meditation, prayer, deep breathing, or quiet reflection.</p>
+                <div>
+                    <p class="description">
+                        Execution of detailed hydrological engineering procedures to accurately trace surface water pathways, model catchment areas, and establish localized hydrological boundaries.
+                    </p>
+                </div>
+                <div class="feature-box">
+                    <h3>Technical Framework</h3>
                     <ul>
-                        <li><strong>Action Step:</strong> Sit in complete quietude for 5 minutes before engaging with your phone.</li>
+                        <li>Digital Elevation Model (DEM) correction</li>
+                        <li>Flow Direction & Accumulation mapping</li>
+                        <li>Stream network definition & basin extraction</li>
                     </ul>
                 </div>
-                <div class="card">
-                    <h3>A — Affirmations</h3>
-                    <p style="color: var(--text-muted); margin-bottom: 15px;">Recite positive and intentional statements about your goals and identity to build confidence and shift your mindset.</p>
-                    <ul>
-                        <li><strong>Examples:</strong> "I am improving every day." / "I can learn difficult things." / "I will work with discipline."</li>
-                        <li><strong>Core Truth:</strong> Your thoughts directly influence your real-world actions.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide">
-            <h2>3. Visualization & 4. Exercise</h2>
-            <div class="grid-2">
-                <div class="card">
-                    <h3>V — Visualization</h3>
-                    <p style="color: var(--text-muted); margin-bottom: 15px;">Mentally rehearse your future achievements, healthy lifestyle, and high-performance states vividly.</p>
-                    <ul>
-                        <li><strong>Purpose:</strong> Trains the brain toward target goals and increases internal belief.</li>
-                        <li><strong>Context:</strong> Elite athletes and highly successful people regularly utilize mental visualization.</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>E — Exercise</h3>
-                    <p style="color: var(--text-muted); margin-bottom: 15px;">Engage in physical movement every single morning to wake up your brain chemistry and spark immediate energy.</p>
-                    <ul>
-                        <li><strong>Examples:</strong> Walking, stretching, running, push-ups, or yoga.</li>
-                        <li><strong>Context:</strong> A physical boost requires very little time; even 5–10 minutes yields massive benefits.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide">
-            <h2>5. Reading & 6. Scribing</h2>
-            <div class="grid-2">
-                <div class="card">
-                    <h3>R — Reading</h3>
-                    <p style="color: var(--text-muted); margin-bottom: 15px;">Consume functional, high-value literature every day to gain knowledge and grow mentally.</p>
-                    <ul>
-                        <li><strong>Topics:</strong> Personal development, psychology, leadership, finance, or spiritual growth.</li>
-                        <li><strong>Value:</strong> Books allow you to learn directly from the world's greatest minds without ever meeting them.</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>S — Scribing (Writing)</h3>
-                    <p style="color: var(--text-muted); margin-bottom: 15px;">Document your mental landscapes, structural goals, lessons learned, or daily gratitude items.</p>
-                    <ul>
-                        <li><strong>Purpose:</strong> Organizes chaotic thoughts, tracks tangible progress, and helps you process emotions.</li>
-                        <li><strong>Action Step:</strong> Write down exactly 3 items you are authentically thankful for every morning.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide">
-            <h2>Core Principles for Transformation</h2>
-            <div class="grid-2">
-                <div class="card">
-                    <h3>Habits Design Reality</h3>
-                    <p style="color: var(--text-muted); margin-bottom: 10px;">Your current life condition is a reflection of your past routines. Positive habits dictate exceptional results, while toxic habits invite poor results.</p>
-                    <p style="color: var(--text-muted);">Upgrading tiny micro-habits step-by-step establishes an unshakeable life foundation.</p>
-                </div>
-                <div class="card">
-                    <h3>Eliminate Reactive Mornings</h3>
-                    <p style="color: var(--text-muted); margin-bottom: 10px;">Too many people start the day late, rush through stress, and immediately check their phones feeling mentally tired.</p>
-                    <p style="color: var(--text-muted);">Dictate your morning calmly and intentionally before the external world dictates it for you.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide">
-            <h2>The 6-Minute Miracle Morning</h2>
-            <p class="subtitle">A simplified framework engineered specifically for high-velocity days or packed schedules.</p>
-            <div class="grid-3">
-                <div class="card"><h3>Minute 1: Silence</h3><p>Deep, intentional silence to center your mind.</p></div>
-                <div class="card"><h3>Minute 2: Affirm</h3><p>Recite your core emotional affirmations aloud.</p></div>
-                <div class="card"><h3>Minute 3: Visualize</h3><p>Vividly picture your day's ultimate wins.</p></div>
-                <div class="card"><h3>Minute 4: Move</h3><p>60 seconds of high-energy movement or stretching.</p></div>
-                <div class="card"><h3>Minute 5: Read</h3><p>Read a single page of an insightful book.</p></div>
-                <div class="card"><h3>Minute 6: Scribe</h3><p>Jot down your top goals or items of gratitude.</p></div>
-            </div>
-        </div>
-
-        <div class="slide center-text">
-            <h2>Conclusion & Takeaway</h2>
-            <div style="max-width: 750px; margin: 30px auto;">
-                <h1 style="font-size: 2.2rem; color: var(--accent-color); font-style: italic;">
-                    "Wake up earlier and spend dedicated time improving your mind, body, and life before your daily workflow begins."
-                </h1>
-                <p class="subtitle" style="margin-top: 30px;">
-                    Small, structured morning improvements generate massive structural life transformations over time.
-                </p>
             </div>
         </div>
 
     </div>
 
     <div class="controls">
-        <button class="nav-btn" id="prevBtn" onclick="changeSlide(-1)">Previous</button>
-        <span class="slide-number" id="slideNum">Slide 1 of 9</span>
-        <button class="nav-btn" id="nextBtn" onclick="changeSlide(1)">Next</button>
+        <button class="nav-btn" id="prevBtn" onclick="changeItem(-1)">Previous Project</button>
+        <span class="item-counter" id="itemCount">Project 1 of 4</span>
+        <button class="nav-btn" id="nextBtn" onclick="changeItem(1)">Next Project</button>
     </div>
 
     <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slide');
-        const slideNum = document.getElementById('slideNum');
+        let currentItem = 0;
+        const items = document.querySelectorAll('.portfolio-item');
+        const itemCount = document.getElementById('itemCount');
 
-        function updateSlideVisibility() {
-            slides.forEach((slide, index) => {
-                slide.classList.toggle('active', index === currentSlide);
+        function updatePortfolioVisibility() {
+            items.forEach((item, index) => {
+                item.classList.toggle('active', index === currentItem);
             });
-            slideNum.textContent = `Slide ${currentSlide + 1} of ${slides.length}`;
+            itemCount.textContent = `Project ${currentItem + 1} of ${items.length}`;
         }
 
-        function changeSlide(direction) {
-            currentSlide += direction;
-            if (currentSlide < 0) currentSlide = 0;
-            if (currentSlide >= slides.length) currentSlide = slides.length - 1;
-            updateSlideVisibility();
+        function changeItem(direction) {
+            currentItem += direction;
+            if (currentItem < 0) currentItem = 0;
+            if (currentItem >= items.length) currentItem = items.length - 1;
+            updatePortfolioVisibility();
         }
 
         // Add keyboard arrow key navigation support
         document.addEventListener('keydown', function(event) {
             if (event.key === 'ArrowRight') {
-                changeSlide(1);
+                changeItem(1);
             } else if (event.key === 'ArrowLeft') {
-                changeSlide(-1);
+                changeItem(-1);
             }
         });
     </script>
