@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12 Rules for Life - Full Presentation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            background-color: #cbd5e1;
+            display: grid;
+            gap: 40px;
+            grid-template-columns: 1fr;
+            margin: 0;
+            min-height: 100vh;
+            padding: 40px 0;
+            place-items: center;
+        }
+
+        .slide-container {
+            align-items: center;
+            background-color: #fcfbf7; 
+            border-radius: 8px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            font-family: 'DM Sans', sans-serif;
+            height: 720px;
+            justify-content: center;
+            overflow: hidden;
+            padding: 60px;
+            position: relative;
+            width: 1280px;
+        }
+
+        .slide-container::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 10px;
+            background: linear-gradient(90deg, #005088, #11caa0);
+        }
+
+        .slide-container h1, .slide-container h2, .slide-container h3 {
+            color: #1e293b;
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .slide-container .slide-title {
+            font-size: 42px;
+            margin-bottom: 40px;
+            text-align: left;
+            width: 100%;
+            color: #005088;
+            border-left: 8px solid #11caa0;
+            padding-left: 20px;
+        }
+
+        .slide-container p, .slide-container li {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #334155;
+        }
+
+        .slide-container .content-area {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .title-slide-layout { text-align: center; }
+        .title-slide-layout h1 { font-size: 80px; letter-spacing: -2px; margin-bottom: 20px; }
+        .title-slide-layout .subtitle { font-size: 32px; color: #64748b; font-style: italic; }
+
+        .two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; width: 100%; }
+
+        .tiled-content { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; width: 100%; }
+        .tile {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .tile .icon { font-size: 32px; color: #11caa0; margin-bottom: 10px; }
+        .tile h3 { font-size: 22px; color: #005088; }
+
+        .image-wrapper { border-radius: 12px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.1); height: 100%; }
+        .image-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+
+        .bullet-list { list-style: none; padding: 0; margin: 0; }
+        .bullet-list li { position: relative; padding-left: 40px; margin-bottom: 20px; }
+        .bullet-list li i { position: absolute; left: 0; top: 5px; color: #11caa0; font-size: 22px; }
+
+        .example-box {
+            background-color: #f1f5f9;
+            border-left: 10px solid #005088;
+            padding: 40px;
+            border-radius: 0 12px 12px 0;
+        }
+        .example-box h3 { color: #005088; margin-bottom: 20px; font-size: 28px; }
+
+        .bleed-image-layout { 
+            display: grid; 
+            grid-template-columns: repeat(2, minmax(0, 1fr)); 
+            padding: 0; 
+            align-items: start; 
+        }
+        .bleed-image-layout .content-container { padding: 60px; height: 100%; display: flex; flex-direction: column; justify-content: center; }
+        .bleed-image-layout .image-container { height: 720px; overflow: hidden; }
+        .bleed-image-layout img.bleed-image-side { height: 720px; width: 100%; object-fit: cover; }
+        .tiled-images-layout { display: flex; gap: 20px; }
+        .image-tile { flex: 1; text-align: center; }
+        .image-tile .image-wrapper { height: 300px; margin-bottom: 20px; }
+        .image-tile h3 { font-size: 22px; color: #005088; }
+    </style>
+</head>
+<body>
+
+<div class="slide-container" id="slide1">
+    <div class="title-slide-layout">
+        <div class="image-wrapper" style="height: 200px; width: 200px; margin: 0 auto 40px; border-radius: 50%;">
+            <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=1374" alt="Books and philosophy theme">
+        </div>
+        <h1>12 RULES FOR LIFE</h1>
+        <p class="subtitle">An Antidote to Chaos</p>
+        <p style="margin-top: 40px; font-weight: 700; color: #005088;">By Jordan B. Peterson</p>
+    </div>
+</div>
+
+<div class="slide-container" id="slide2">
+    <h2 class="slide-title">1. Stand Up Straight With Your Shoulders Back</h2>
+    <div class="content-area">
+        <div class="tiled-content">
+            <div class="tile">
+                <div class="icon"><i class="fas fa-brain"></i></div>
+                <h3>Psychological View</h3>
+                <p>Posture affects serotonin levels, mood, and social perception. Standing tall signals competence.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fas fa-scroll"></i></div>
+                <h3>Philosophical View</h3>
+                <p>Accept the responsibility of being. Voluntary confrontation of the world requires courage.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fas fa-dragon"></i></div>
+                <h3>Mythological View</h3>
+                <p>The hero stands upright before the dragon (chaos). It is the rejection of the victim stance.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fas fa-users"></i></div>
+                <h3>Political View</h3>
+                <p>Strong individuals form a resilient society. Posture is the first step toward civic duty.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide3">
+    <h2 class="slide-title">Real-Life Example: Rule 1</h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div class="example-box">
+                <h3>The Shy Student</h3>
+                <p>A student avoids eye contact and hunches over in class. Peers ignore or bully him.</p>
+                <p><strong>Lesson:</strong> By changing his posture, he triggers a positive feedback loop. People respect him more, and he gains self-confidence.</p>
+            </div>
+            <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1471" alt="Confident person standing tall">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide4">
+    <h2 class="slide-title">2. Treat Yourself Like Someone You Are Responsible for Helping</h2>
+    <div class="content-area">
+        <div class="tiled-content">
+            <div class="tile">
+                <div class="icon"><i class="fas fa-user-check"></i></div>
+                <h3>Psychological</h3>
+                <p>Self-respect is a prerequisite for mental stability. We often take better care of pets than ourselves.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fas fa-balance-scale"></i></div>
+                <h3>Philosophical</h3>
+                <p>You have a duty to your own Being. Neglect is a form of nihilism that harms others too.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fas fa-hand-holding-heart"></i></div>
+                <h3>Mythological</h3>
+                <p>The wounded healer archetype: one must heal themselves before they can truly assist the world.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fas fa-city"></i></div>
+                <h3>Political</h3>
+                <p>Functional societies require citizens who value their own health and future growth.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide5">
+    <h2 class="slide-title">Real-Life Example: Rule 2</h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=1430" alt="Care and medical support icon">
+            </div>
+            <div class="example-box">
+                <h3>The Self-Neglecting Mother</h3>
+                <p>A mother ensures her children take every dose of medicine but forgets her own critical prescriptions.</p>
+                <p><strong>Lesson:</strong> You cannot effectively help others while destroying yourself. Self-care is a moral obligation.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide6">
+    <h2 class="slide-title">3. Make Friends With People Who Want the Best for You</h2>
+    <div class="content-area">
+        <div class="tiled-content">
+            <div class="tile">
+                <div class="icon"><i class="fas fa-users-rays"></i></div>
+                <h3>Psychological</h3>
+                <p>Social circles shape your behavior. Positive circles strengthen motivation and emotional health.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fas fa-gem"></i></div>
+                <h3>Philosophical</h3>
+                <p>Virtue grows through association with honorable people. Avoid "saving" those who don't want to be saved.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fas fa-compass"></i></div>
+                <h3>Mythological</h3>
+                <p>Heroes travel with loyal companions. Destructive influences are the siren's song.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fas fa-network-wired"></i></div>
+                <h3>Political</h3>
+                <p>Networks of excellence influence culture. Strong social bonds build stable, non-violent societies.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide7">
+    <h2 class="slide-title">Real-Life Example: Rule 3</h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div class="example-box">
+                <h3>Two Graduates</h3>
+                <p>One joins a circle focused on business and learning; the other joins friends involved in drugs and procrastination.</p>
+                <p><strong>Lesson:</strong> Your social circle is your trajectory. Choose people who challenge you to rise higher.</p>
+            </div>
+            <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1470" alt="Supportive team or friends">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide8">
+    <h2 class="slide-title">4. Compare Yourself to Who You Were Yesterday</h2>
+    <div class="content-area">
+        <div class="tiled-content">
+            <div class="tile">
+                <div class="icon"><i class="fas fa-chart-line"></i></div>
+                <h3>Psychological</h3>
+                <p>Constant comparison to ideals on social media leads to misery. Small progress builds lasting confidence.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fas fa-mountain"></i></div>
+                <h3>Philosophical</h3>
+                <p>True competition is internal mastery. The goal is the transformation of the self, not the defeat of others.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fas fa-fire"></i></div>
+                <h3>Mythological</h3>
+                <p>The hero's journey is the shedding of the old self (yesterday) to give birth to the new, stronger version.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fas fa-medal"></i></div>
+                <h3>Political</h3>
+                <p>Merit should be measured by genuine individual improvement, not envy of end-state equality.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide9">
+    <h2 class="slide-title">Real-Life Example: Rule 4</h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=1470" alt="Path of upward growth">
+            </div>
+            <div class="example-box">
+                <h3>The Struggling Professional</h3>
+                <p>A professional compares his progress to industry leaders and feels paralyzed. He switches to comparing his work only to last month's stats.</p>
+                <p><strong>Lesson:</strong> Personal growth is gradual and relative. Competing with your past self is the only winnable game.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide10">
+    <h2 class="slide-title">5. Do Not Let Your Children Do Anything That Makes You Dislike Them</h2>
+    <div class="content-area">
+        <div class="tiled-content">
+            <div class="tile">
+                <div class="icon"><i class="fas fa-child"></i></div>
+                <h3>Psychological</h3>
+                <p>Children need boundaries for emotional security. A child who is disliked by parents will be disliked by the world.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fas fa-hand-holding-heart"></i></div>
+                <h3>Philosophical</h3>
+                <p>Discipline is an act of love, not tyranny. It prepares the child for a complex, rule-governed reality.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fas fa-university"></i></div>
+                <h3>Mythological</h3>
+                <p>Wise elders guide the young away from chaos and toward civilization. The parent as a benevolent king.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fas fa-flag"></i></div>
+                <h3>Political</h3>
+                <p>Parents are the first mediators between the individual and society. Discipline prevents future anarchy.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide11">
+    <h2 class="slide-title">Real-Life Example: Rule 5</h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div class="example-box">
+                <h3>The Tantrum in the Store</h3>
+                <p>A child screams for candy. The parent gives in to avoid social embarrassment, teaching the child that manipulation works.</p>
+                <p><strong>Lesson:</strong> By setting a boundary now, the parent ensures the child grows up socially competent and agreeable.</p>
+            </div>
+            <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1484665754804-74b091211472?q=80&w=1470" alt="Parent teaching a child">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide12">
+    <h2 class="slide-title">6. Set Your House in Perfect Order Before You Criticize the World</h2>
+    <div class="content-area">
+        <div class="tiled-content">
+            <div class="tile">
+                <div class="icon"><i class="fas fa-house-chimney"></i></div>
+                <h3>Psychological</h3>
+                <p>Internal locus of control. Fixing small things you can control reduces feelings of powerlessness and resentment.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fas fa-brain"></i></div>
+                <h3>Philosophical</h3>
+                <p>Stoicism. Focusing on personal virtue before external activism prevents hypocrisy and ideological blindness.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fas fa-leaf"></i></div>
+                <h3>Mythological</h3>
+                <p>Cleaning the garden. One must pull the weeds in their own heart before planting a forest for others.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fas fa-landmark"></i></div>
+                <h3>Political</h3>
+                <p>Local governance begins with self-governance. A stable state is a collection of stable households.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide13">
+    <h2 class="slide-title">Real-Life Example: Rule 6</h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1469" alt="Organized clean room workspace">
+            </div>
+            <div class="example-box">
+                <h3>The Aspiring Activist</h3>
+                <p>A man demands sweeping macro reforms while his personal relationships are broken and his immediate responsibilities are entirely neglected.</p>
+                <p><strong>Lesson:</strong> Fix what is at your feet first. Integrity in small things gives you the foundation to handle large ones.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide14">
+    <h2 class="slide-title">7. Pursue What is Meaningful, Not What is Expedient</h2>
+    <div class="content-area">
+        <div class="tiled-content">
+            <div class="tile">
+                <div class="icon"><i class="fas fa-seedling"></i></div>
+                <h3>Psychological</h3>
+                <p>Delayed gratification. Sacrifice short-term comfort for long-term psychological fulfillment and purpose.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fas fa-book"></i></div>
+                <h3>Philosophical</h3>
+                <p>Nihilism is the result of choosing expediency. Meaning is found in taking on the heaviest burden you can bear.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fas fa-cross"></i></div>
+                <h3>Mythological</h3>
+                <p>The ultimate sacrifice. Sacrificing the present ease for the eternal and lasting good.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fas fa-tower-observation"></i></div>
+                <h3>Political</h3>
+                <p>Stable nations are built on enduring values, not the shifting sands of populism or immediate desires.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide15">
+    <h2 class="slide-title">Real-Life Example: Rule 7</h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div class="example-box">
+                <h3>Sustained Career Development</h3>
+                <p>An innovator chooses a complex, meaningful long-term project over a shallow task that offers instant but temporary recognition.</p>
+                <p><strong>Lesson:</strong> Sacrifice the 'now' for the 'better.' Meaning sustains you through the inevitable hardships of life.</p>
+            </div>
+            <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1470" alt="Majestic mountain peak representing meaning">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide16">
+    <h2 class="slide-title">8. Tell the Truth — Or, At Least, Don't Lie</h2>
+    <div class="content-area">
+        <div class="tiled-content">
+            <div class="tile">
+                <div class="icon"><i class="fas fa-eye"></i></div>
+                <h3>Psychological</h3>
+                <p>Lying distorts your perception. You cannot navigate a reality you have willfully misrepresented.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fas fa-feather-pointed"></i></div>
+                <h3>Philosophical</h3>
+                <p>Integrity. Deception is the tool of weakness; truth is the foundation of clear communication and structure.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fas fa-sun"></i></div>
+                <h3>Mythological</h3>
+                <p>The Logos (Word). Speech that creates order out of chaos must be fundamentally truthful to be effective.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fas fa-shield"></i></div>
+                <h3>Political</h3>
+                <p>Totalitarianism begins with individual lies. Truth is the only shield against ideological corruption.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide17">
+    <h2 class="slide-title">Real-Life Example: Rule 8</h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?q=80&w=1470" alt="Clear crystal light representing truth">
+            </div>
+            <div class="example-box">
+                <h3>The Technical Mistake</h3>
+                <p>A professional discovers a flaw in their project model and states it clearly immediately, rather than masking it to protect pride.</p>
+                <p><strong>Lesson:</strong> Truth prevents small structural problems from growing into catastrophes. It preserves trust.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide18">
+    <h2 class="slide-title">9. Assume That the Person You Are Listening to Might Know Something You Don't</h2>
+    <div class="content-area">
+        <div class="tiled-content">
+            <div class="tile">
+                <div class="icon"><i class="fas fa-ear-listen"></i></div>
+                <h3>Psychological</h3>
+                <p>Active listening. Dialogue is not a competition to win, but an opportunity to update your worldview.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fas fa-compass-drafting"></i></div>
+                <h3>Philosophical</h3>
+                <p>Humility. Recognizing your own insufficiency is the first step toward genuine wisdom and learning.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fas fa-people-arrows"></i></div>
+                <h3>Mythological</h3>
+                <p>The Wise Traveler. Every encounter is an opportunity to acquire a piece of truth you are missing.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fas fa-comments"></i></div>
+                <h3>Political</h3>
+                <p>Free speech requires the ability to listen. True collaborative dialogue is the alternative to force.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide19">
+    <h2 class="slide-title">Real-Life Example: Rule 9</h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div class="example-box">
+                <h3>The Strategic Dialogue</h3>
+                <p>During a complex project standoff, a leader stops enforcing their view and intently listens to the feedback of the team.</p>
+                <p><strong>Lesson:</strong> Listening uncovers blindspots. It converts opposition into actionable innovation.</p>
+            </div>
+            <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1531535934027-6b7362f9921b?q=80&w=1470" alt="Engaged strategic meeting">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide20">
+    <h2 class="slide-title">10. Be Precise in Your Speech</h2>
+    <div class="content-area">
+        <div class="tiled-content">
+            <div class="tile">
+                <div class="icon"><i class="fas fa-crosshairs"></i></div>
+                <h3>Psychological</h3>
+                <p>Precision reduces anxiety. Naming a problem makes it manageable; vagueness keeps it an unknown threat.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fas fa-pen-nib"></i></div>
+                <h3>Philosophical</h3>
+                <p>Clarity. Precise language dissects the fog of chaos to reveal the actual functional options available.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fas fa-wand-sparkles"></i></div>
+                <h3>Mythological</h3>
+                <p>Defining the boundaries of a threat. By naming and specifying an obstacle, the hero renders it defeatable.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fas fa-gavel"></i></div>
+                <h3>Political</h3>
+                <p>Clarity in law and metrics. Vague language and objectives lead directly to institutional confusion and friction.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide21">
+    <h2 class="slide-title">Real-Life Example: Rule 10</h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1364" alt="Sharp geometric precision concept">
+            </div>
+            <div class="example-box">
+                <h3>The Specific Action Plan</h3>
+                <p>Instead of declaring a vague goal like "we must improve output," a team defines a clear, numerical target with fixed dates.</p>
+                <p><strong>Lesson:</strong> Precision cuts away ambiguity, leaving no room for excuses and providing a sharp trajectory.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide22">
+    <h2 class="slide-title">11. Do Not Bother Children When They Are Skateboarding</h2>
+    <div class="content-area">
+        <div class="tiled-content">
+            <div class="tile">
+                <div class="icon"><i class="fas fa-person-running"></i></div>
+                <h3>Psychological</h3>
+                <p>Competence building. Humans naturally need a degree of challenge to build psychological anti-fragility.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fas fa-shield-virus"></i></div>
+                <h3>Philosophical</h3>
+                <p>Mastery over fear. Overprotection limits personal capabilities, substituting safety for necessary resilience.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fas fa-sword"></i></div>
+                <h3>Mythological</h3>
+                <p>The Initiation. One must leave complete security and encounter risk to discover their latent strength.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fas fa-hammer"></i></div>
+                <h3>Political</h3>
+                <p>A society that completely penalizes all risk limits individual enterprise, stalling innovation and competence.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide23">
+    <h2 class="slide-title">Real-Life Example: Rule 11</h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div class="example-box">
+                <h3>The Controlled Challenge</h3>
+                <p>Instead of completely restricting young designers or builders from difficult tools, mentors teach proper mastery under managed risk.</p>
+                <p><strong>Lesson:</strong> Encouraging difficult feats builds confidence and technical competence. Avoid suppressing natural drive.</p>
+            </div>
+            <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1564982743470-47de0ceecaf8?q=80&w=1374" alt="Skillful skate boarding movement representing risk">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide24">
+    <h2 class="slide-title">12. Pet a Cat When You Encounter One on the Street</h2>
+    <div class="content-area">
+        <div class="tiled-content">
+            <div class="tile">
+                <div class="icon"><i class="fas fa-heart"></i></div>
+                <h3>Psychological</h3>
+                <p>Mindfulness and grounding. In the presence of tragedy or heavy workloads, notice the small redeeming elements of life.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fas fa-sun"></i></div>
+                <h3>Philosophical</h3>
+                <p>Gratitude. Embracing the constraints of existence requires moments of spontaneous wonder to block out cynicism.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fas fa-star"></i></div>
+                <h3>Mythological</h3>
+                <p>Unplanned Blessings. Small details are reminders that existence is built on beauty as well as structure.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fas fa-palette"></i></div>
+                <h3>Political</h3>
+                <p>Preserving baseline hope. Valuing immediate, localized goodness keeps individuals from falling into ideology or despair.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide25">
+    <h2 class="slide-title">Real-Life Example: Rule 12</h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=1443" alt="Cat representation of simple joy">
+            </div>
+            <div class="example-box">
+                <h3>The High-Stress Week</h3>
+                <p>Amid intense industrial deadlines, a creator takes two minutes to look at a sunset or interact with nature, resetting their focus.</p>
+                <p><strong>Lesson:</strong> Responsibility is crucial, but stopping to appreciate unexpected simple wonders makes the long journey viable.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide26">
+    <h2 class="slide-title">Summary: Rules 1 to 6</h2>
+    <div class="content-area">
+        <div class="bullet-list">
+            <ul>
+                <li><i class="fas fa-check-circle"></i> <strong>Rule 1:</strong> Adopt a posture of confidence to engage with existence.</li>
+                <li><i class="fas fa-check-circle"></i> <strong>Rule 2:</strong> Care for your health and mind as a critical moral duty.</li>
+                <li><i class="fas fa-check-circle"></i> <strong>Rule 3:</strong> Anchor your social network around excellence and integrity.</li>
+                <li><i class="fas fa-check-circle"></i> <strong>Rule 4:</strong> Focus explicitly on individual, daily incremental growth.</li>
+                <li><i class="fas fa-check-circle"></i> <strong>Rule 5:</strong> Cultivate social competence and sound boundaries in the young.</li>
+                <li><i class="fas fa-check-circle"></i> <strong>Rule 6:</strong> Bring extreme order to your immediate space before critique.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide27">
+    <h2 class="slide-title">Summary: Rules 7 to 12</h2>
+    <div class="content-area">
+        <div class="bullet-list">
+            <ul>
+                <li><i class="fas fa-check-circle"></i> <strong>Rule 7:</strong> Invest your efforts in lasting meaning over quick comfort.</li>
+                <li><i class="fas fa-check-circle"></i> <strong>Rule 8:</strong> Use absolute authenticity and truth to align your map.</li>
+                <li><i class="fas fa-check-circle"></i> <strong>Rule 9:</strong> Listen with humility, acknowledging you have more to learn.</li>
+                <li><i class="fas fa-check-circle"></i> <strong>Rule 10:</strong> Address conflicts and realities with precise language.</li>
+                <li><i class="fas fa-check-circle"></i> <strong>Rule 11:</strong> Build psychological resilience through calculated risk.</li>
+                <li><i class="fas fa-check-circle"></i> <strong>Rule 12:</strong> Preserve equilibrium by capturing the small joys of Being.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container bleed-image-layout" id="slide28">
+    <div class="content-container">
+        <h2 class="slide-title">Conclusion</h2>
+        <div class="content-area">
+            <p><strong>The Responsibility Framework</strong></p>
+            <p>Life balances precisely on the boundary between rigid order and volatile chaos. By embodying these rules, we develop the fortitude to face existence with complete accountability and profound purpose.</p>
+            <p style="color:#005088; font-weight:700;">Stand upright. Express truth. Build meaning.</p>
+        </div>
+    </div>
+    <div class="image-container">
+        <img class="bleed-image-side" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1470" alt="Mountain summit perspective">
+    </div>
+</div>
+
+<div class="slide-container" id="slide29">
+    <div class="title-slide-layout">
+        <h2 style="font-size: 60px; color: #005088;">QUESTIONS & REVIEWS</h2>
+        <p class="subtitle">Thank you for your engagement.</p>
+        <p style="margin-top: 50px; font-weight: 700;">Nexus Studio & Eco-Chic-Bloom</p>
+    </div>
+</div>
+
+</body>
+</html>
